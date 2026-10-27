@@ -5,84 +5,114 @@
 
 body {
     background-color: #ffc085;
+    margin: 0;
+    padding: 0 10px 30px;
 }
 
 header {
     text-align: center;
     color: rgb(39, 106, 122);
-    
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-    width: 500px;
-    height: 400px;
+    width: 340px;
+    padding: 20px;
     background-color: #81d449;
-    
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Display */
+.screen {
+    background-color: rgb(248, 124, 124);
+    color: rgb(70, 12, 30);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#expression {
+    font-size: 0.95rem;
+    min-height: 1.2em;
+    opacity: 0.7;
+}
+
+#display {
+    font-size: 1.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.numbers_btn,
+.operator_btn,
+.btn {
+    border: none;
+    font-size: x-large;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.numbers_btn,
+.operator_btn,
+#dot_btn {
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
 }
 
 .numbers_btn {
     background-color: #eb88ff;
-    border: none;
-    border-radius: 100%;
     color: rgb(255, 0, 0);
-    width: 50px;
-    height: 50px;
-    font-size: x-large;
-    font-weight: 600;
-    margin: 5px;
 }
 
 .operator_btn {
     background-color: #ff8a1d;
-    border: none;
-    border-radius: 100%;
     color: rgb(47, 102, 255);
-    width: 50px;
-    height: 50px;
-    font-size: x-large;
-    font-weight: 600;
-    margin: 5px;
 }
 
 .btn {
     background-color: #4c71c0;
-    border: none;
-    color: rgb(233, 236, 10); 
-    font-size: x-large;
-    font-weight: 600;
-    margin: 5px;
+    color: rgb(233, 236, 10);
 }
 
-#backspace_btn , #clr_btn  {
+#backspace_btn,
+#clr_btn {
+    grid-column: span 2;
+    height: 45px;
     border-radius: 50px;
-    width: 150px;
-    height: 40px;
-}
-
-#dot_btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    font-size: x-large;
-    font-weight: 600;
-}
-
-.numbers_btn:hover , .btn:hover , .operator_btn:hover {
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-.display {
-    width: 300px;
-    height: 50px;
-    background-color: rgb(248, 124, 124);
     font-size: large;
-    color: rgb(70, 12, 30);
-    border-radius: 10px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
-    padding-left: 10px;
-    
+}
+
+.numbers_btn:hover,
+.operator_btn:hover,
+.btn:hover {
+    opacity: 0.6;
+}
+
+.numbers_btn:active,
+.operator_btn:active,
+.btn:active {
+    transform: scale(0.95);
+}
+
+#dot_btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
