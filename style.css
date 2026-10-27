@@ -67,8 +67,9 @@ header {
     font-weight: 600;
 }
 
-.numbers_btn , .btn , .operator_btn:hover {
+.numbers_btn:hover , .btn:hover , .operator_btn:hover {
     cursor: pointer;
+    opacity: 0.5;
 }
 
 .display {
