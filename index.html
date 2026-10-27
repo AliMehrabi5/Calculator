@@ -13,34 +13,34 @@
     </header>
     <main>
         <div class="container">
-            <div class="display"></div>
-            <div class="first_row">
-                <button class="numbers_btn" id="seven">7</button>
-                <button class="numbers_btn" id="eight">8</button>
-                <button class="numbers_btn" id="nine">9</button>
-                <button class="operator_btn" id="plus">+</button>
+            <div class="screen">
+                <div id="expression"></div>
+                <div id="display">0</div>
+            </div>
+
+            <div class="buttons">
                 <button class="btn" id="backspace_btn">Backspace</button>
-            </div>
-            <div class="second_row">
-                <button class="numbers_btn" id="four">4</button>
-                <button class="numbers_btn" id="five">5</button>
-                <button class="numbers_btn" id="six">6</button>
-                <button class="operator_btn" id="mines">-</button>
                 <button class="btn" id="clr_btn">clr</button>
-                
-            </div>
-            <div class="third_row">
-                <button class="numbers_btn" id="one">1</button>
-                <button class="numbers_btn" id="two">2</button>
-                <button class="numbers_btn" id="three">3</button>
-                <button class="operator_btn" id="multiply">×</button>
-                
-            </div>
-            <div class="fourth_row">
+
+                <button class="numbers_btn" id="seven" data-digit="7">7</button>
+                <button class="numbers_btn" id="eight" data-digit="8">8</button>
+                <button class="numbers_btn" id="nine" data-digit="9">9</button>
+                <button class="operator_btn" id="plus" data-operator="+">+</button>
+
+                <button class="numbers_btn" id="four" data-digit="4">4</button>
+                <button class="numbers_btn" id="five" data-digit="5">5</button>
+                <button class="numbers_btn" id="six" data-digit="6">6</button>
+                <button class="operator_btn" id="minus" data-operator="-">-</button>
+
+                <button class="numbers_btn" id="one" data-digit="1">1</button>
+                <button class="numbers_btn" id="two" data-digit="2">2</button>
+                <button class="numbers_btn" id="three" data-digit="3">3</button>
+                <button class="operator_btn" id="multiply" data-operator="*">×</button>
+
                 <button class="operator_btn" id="equal">=</button>
-                <button class="numbers_btn" id="zero">0</button>
+                <button class="numbers_btn" id="zero" data-digit="0">0</button>
                 <button class="btn" id="dot_btn">.</button>
-                <button class="operator_btn" id="divide">÷</button>
+                <button class="operator_btn" id="divide" data-operator="/">÷</button>
             </div>
         </div>
     </main>
